@@ -4,7 +4,7 @@ import os
 from aiogram.enums import ContentType
 from aiogram.types import Message
 from aiogram.types.input_file import FSInputFile
-from PIL import Image
+#from PIL import Image
 import random
 
 # инфа о блокировке бота
