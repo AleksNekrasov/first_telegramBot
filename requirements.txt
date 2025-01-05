@@ -22,3 +22,4 @@ yarl==1.9.4
 
 # pip freeze > requirements.txt
 
+# pip install -r requirements.txt

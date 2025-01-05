@@ -4,7 +4,7 @@ from environs import Env
 import dotenv
 
 
-from config_reader import config
+#from config_reader import config
 
 import logging
 import sys
@@ -34,9 +34,9 @@ async def main():
 
     # -----через from environs import Env------------------------------------------=
     notebook_path = '/home/alex/Рабочий стол/Bot_Telegram/env_bot_test_BOT/.env'
-    desktop_path : str
+    desktop_path = 'C:/pyCharm/tBot_env/.env'
     env = Env()   # Создаем экземпляр класса Env
-    env.read_env(notebook_path)
+    env.read_env(desktop_path)
     bot_token = env('BOT_TOKEN')
     bot = Bot(token=bot_token)
     #---через библу os и dotenv-----------------------------------------------------

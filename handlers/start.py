@@ -3,7 +3,7 @@ from aiogram.types import Message
 from aiogram.filters import Command
 import os
 
-from config_reader import config
+#from config_reader import config
 from keyboards.kb_for_start import kb_for_start
 
 
