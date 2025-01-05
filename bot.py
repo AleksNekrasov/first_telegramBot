@@ -1,6 +1,8 @@
 #импорт конфига для токена
 import os
+from environs import Env
 import dotenv
+
 
 from config_reader import config
 
@@ -30,11 +32,18 @@ from handlers import start, group_games, questions, different_types, usernames, 
 # Запуск бота
 async def main():
 
+    # -----через from environs import Env------------------------------------------=
+    notebook_path = '/home/alex/Рабочий стол/Bot_Telegram/env_bot_test_BOT/.env'
+    desktop_path : str
+    env = Env()   # Создаем экземпляр класса Env
+    env.read_env(notebook_path)
+    bot_token = env('BOT_TOKEN')
+    bot = Bot(token=bot_token)
     #---через библу os и dotenv-----------------------------------------------------
     #dotenv.load_dotenv()
     #bot = Bot(token=os.getenv('BOT_TOKEN'))
     #-------------------------------------------------------------------------------
-    bot = Bot(token=config.bot_token.get_secret_value()) # через файл config_readers
+    #bot = Bot(token=config.bot_token.get_secret_value()) # через файл config_readers
     #--------------------------------------------------------------------------------
     dp = Dispatcher()
 
