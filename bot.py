@@ -1,4 +1,7 @@
 #импорт конфига для токена
+import os
+import dotenv
+
 from config_reader import config
 
 import logging
@@ -27,7 +30,12 @@ from handlers import start, group_games, questions, different_types, usernames, 
 # Запуск бота
 async def main():
 
-    bot = Bot(token=config.bot_token.get_secret_value())
+    #---через библу os и dotenv-----------------------------------------------------
+    #dotenv.load_dotenv()
+    #bot = Bot(token=os.getenv('BOT_TOKEN'))
+    #-------------------------------------------------------------------------------
+    bot = Bot(token=config.bot_token.get_secret_value()) # через файл config_readers
+    #--------------------------------------------------------------------------------
     dp = Dispatcher()
 
     #dp.include_routers(group_games.router, questions.router, different_types.router)

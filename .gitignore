@@ -100,3 +100,8 @@ Thumbs.db
 
 # Jupyter Notebook контролы
 .ipynb_checkpoints/
+
+# мои файлы
+
+bot_token_test.py
+.env
